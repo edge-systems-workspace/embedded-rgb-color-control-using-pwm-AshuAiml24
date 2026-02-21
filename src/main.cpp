@@ -44,27 +44,39 @@ void setup() {
 
 
 
+/**
+ * @brief Run the LED demo loop: digital blink and PWM color cycle.
+ *
+ * @details
+ * First toggles the red LED using digitalWrite with 1 second intervals.
+ * Then cycles full-brightness red, green, and blue using analogWrite (PWM),
+ * each shown for 1 second. A short pause separates cycles.
+ *
+ * @return void
+ */
 void loop() {
+ // -------- DIGITAL MODE --------
+ digitalWrite(RED_pin, HIGH);
+ delay(1000);
 
-    // -------- DIGITAL MODE --------
+ digitalWrite(RED_pin, LOW);
+ delay(1000);
 
-    // TODO 7:
-    // Turn ON red (digital HIGH)
+ // -------- ANALOG (PWM) MODE --------
+ analogWrite(RED_pin, 255);   // Full brightness
+ analogWrite(GREEN_pin, 0);
+ analogWrite(BLUE_pin, 0);
+ delay(1000);
 
-    // TODO 8:
-    // Turn OFF red
+ analogWrite(RED_pin, 0);
+ analogWrite(GREEN_pin, 255);
+ analogWrite(BLUE_pin, 0);
+ delay(1000);
 
-    // -------- ANALOG (PWM) MODE --------
+ analogWrite(RED_pin, 0);
+ analogWrite(GREEN_pin, 0);
+ analogWrite(BLUE_pin, 255);
+ delay(1000);
 
-    // TODO 9:
-    // Set RED brightness using analogWrite()
-
-    // TODO 10:
-    // Set GREEN brightness using analogWrite()
-
-    // TODO 11:
-    // Set BLUE brightness using analogWrite()
-
-    // TODO 12:
-    // Add delay for visible transition
+ delay(500);
 }
