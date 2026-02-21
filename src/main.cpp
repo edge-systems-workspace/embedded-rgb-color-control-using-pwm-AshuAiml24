@@ -23,17 +23,26 @@ int GREEN_pin = 10;
 int BLUE_pin = 11;
  // Define BLUE pin (Use 11)
 
+/**
+ * @brief Initialize serial communication and configure LED pins.
+ *
+ * @details
+ * Starts the hardware Serial at 9600 baud and sets the RGB pins as OUTPUT.
+ * Prints an initialization message to the serial console.
+ *
+ * @return void
+ */
 void setup() {
+ Serial.begin(9600);
 
-    // TODO 4:
-    // Initialize Serial communication (9600 baud)
+ pinMode(RED_pin, OUTPUT);
+ pinMode(GREEN_pin, OUTPUT);
+ pinMode(BLUE_pin, OUTPUT);
 
-    // TODO 5:
-    // Configure RGB pins as OUTPUT
-
-    // TODO 6:
-    // Print initialization message
+ Serial.println("RGB LED Initialized!");
 }
+
+
 
 void loop() {
 
