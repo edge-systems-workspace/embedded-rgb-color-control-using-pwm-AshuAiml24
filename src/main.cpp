@@ -15,11 +15,12 @@
 int RED_pin = 9;
 
  // Define RED pin (Use 9)
+int GREEN_pin = 10;
 
- // TODO 2:
+
  // Define GREEN pin (Use 10)
 
- // TODO 3:
+int BLUE_pin = 11;
  // Define BLUE pin (Use 11)
 
 void setup() {
