@@ -1,16 +1,19 @@
 #include <Arduino.h>
+
 /**
  * @file main.cpp
  * @brief Embedded RGB LED Control (Digital + PWM)
- * @author YOUR_NAME
- * @date YYYY-MM-DD
+ * @author ASHU PAL
+ * @date 2026-02-17
  *
  * @details
- * Controls RGB LED using digital ON/OFF
- * and analog PWM brightness control.
+ * Controls an RGB LED using digital ON/OFF and analog PWM brightness control.
+ * Demonstrates simple digital blink and PWM color cycling on three pins.
  */
 
- // TODO 1:
+
+int RED_pin = 9;
+
  // Define RED pin (Use 9)
 
  // TODO 2:
